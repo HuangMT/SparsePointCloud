@@ -31,6 +31,6 @@ ab = rand(2,N);
 inv_idx = sum(ab,1) > 1;
 ab(:,inv_idx) = 1-ab(:,inv_idx); % determin the position in surface
 
-pc = ab(1,:).*A(:,sfID)+ab(2,:).*A(:,sfID)+vert(:,face(1,sfID));
+pc = ab(1,:).*A(:,sfID)+ab(2,:).*B(:,sfID)+vert(:,face(1,sfID));
 
 end
